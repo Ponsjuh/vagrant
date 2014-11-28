@@ -16,3 +16,9 @@ Currently installing
 example
 -------
 config.vm.provision "shell", path: "config/vagrant/run.sh"
+
+
+Todo
+----
+
+- Make httpd use the default /var/www/html as DocumentRoot
