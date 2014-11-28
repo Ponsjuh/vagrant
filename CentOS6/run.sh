@@ -3,10 +3,10 @@
 # Source function library.
 . /etc/init.d/functions
 
-/vagrant/installers/extraRepos.sh;
-/vagrant/installers/httpd.sh;
-/vagrant/installers/php.sh;
-/vagrant/installers/iptables.sh;
+/vagrant/provisioning/extraRepos.sh;
+/vagrant/provisioning/httpd.sh;
+/vagrant/provisioning/php.sh;
+/vagrant/provisioning/iptables.sh;
 
 echo '----[Starting httpd]--';
 ACTIVE=$(service httpd status | sed 's/^.* //');
