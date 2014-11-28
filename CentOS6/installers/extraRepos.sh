@@ -10,7 +10,7 @@ else
     echo '   > [SKIPPING] Epel repository';
 fi
 
-INSTALLED=$(yum --enablerepo=remi repolist | grep remi | wc -l)
+INSTALLED=$(yum --enablerepo=* --disablerepo=c6-media repolist | grep remi | wc -l)
 if [ $INSTALLED -eq 0 ]; then
     echo '   > [INSTALL ] Remi repository';
     rpm -Uvh --quiet --nosignature --nodigest http://rpms.famillecollet.com/enterprise/remi-release-6.rpm > /dev/null;
