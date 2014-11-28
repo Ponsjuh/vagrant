@@ -8,9 +8,10 @@ if [ $INSTALLED -eq 0 ]; then
     sed -i "s|#ServerName www.example.com:80|ServerName intradev.zetacom.lh:80|" /etc/httpd/conf/httpd.conf
     sed -i 's|DocumentRoot "/var/www/html"|DocumentRoot "/var/www/sites/"|' /etc/httpd/conf/httpd.conf
     sed -i 's|<Directory "/var/www/html">"|<Directory "/var/www/sites">"|' /etc/httpd/conf/httpd.conf
-    echo 'NameVirtualHost *:80' >> /etc/httpd/conf/httpd.conf
     sed -i 's|ServerSignature On|ServerSignature Off|' /etc/httpd/conf/httpd.conf
     sed -i 's|#EnableSendfile Off|EnableSendfile Off|' /etc/httpd/conf/httpd.conf
+    
+    echo 'NameVirtualHost *:80' >> /etc/httpd/conf/httpd.conf
     echo "# Include the virtual host configurations:" >> /etc/httpd/conf/httpd.conf
     echo "Include sites-enabled/" >> /etc/httpd/conf/httpd.conf
 
