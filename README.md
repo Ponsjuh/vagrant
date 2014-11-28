@@ -1,9 +1,16 @@
 Vagrant provising scripts
 =========================
 
-Currently available
+Supported OS
 -------------------
+- CentOS 6
 - CentOS 7
+
+Currently installing
+- Epel repository
+- httpd
+- php
+
 
 example
 -------
