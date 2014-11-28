@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-INSTALLED=$(yum info epel-release | grep Repo | sed -n "/\installed/p" | wc -l)
+INSTALLED=$(yum repolist | grep epel | wc -l)
 if [ $INSTALLED -eq 0 ]; then
       echo '---[Installing extra repositories]---';
       yum -y -q install epel-release;

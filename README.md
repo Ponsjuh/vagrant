@@ -15,5 +15,5 @@ Currently installing
 Todo
 ----
 
-- Make httpd use the default /var/www/html as DocumentRoot
+- Make httpd use the default /var/www/html as DocumentRoot (CentOS 7)
 - Make self-signed certificate for HTTPS (SSL)
