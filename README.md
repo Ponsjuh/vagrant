@@ -7,6 +7,7 @@ Supported OS
 - CentOS 7
 
 Currently installing
+--------------------
 - Epel repository
 - httpd
 - php
