@@ -12,12 +12,6 @@ Currently installing
 - httpd
 - php
 
-
-example
--------
-config.vm.provision "shell", path: "run.sh"
-
-
 Todo
 ----
 
