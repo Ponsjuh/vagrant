@@ -3,9 +3,9 @@
 INSTALLED=$(yum repolist | grep epel | wc -l)
 if [ $INSTALLED -eq 0 ]; then
       echo '---[Installing extra repositories]---';
-      rpm -Uvh --quiet http://mirrors.kernel.org/fedora-epel/6/i386/epel-release-6-8.noarch.rpm;
+      rpm -Uvh --quiet --nosignature --nodigest http://mirrors.kernel.org/fedora-epel/6/i386/epel-release-6-8.noarch.rpm;
       rpm --import --quiet /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6;
-      yum history sync;
+      yum -q history sync > /dev/null;
 else
     echo '---[Already installed extra repositories]--';
 fi
