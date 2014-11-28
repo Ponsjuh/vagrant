@@ -1,4 +1,4 @@
-Vagrant provising scripts
+Vagrant provisioning scripts
 =========================
 
 Supported OS
@@ -15,7 +15,7 @@ Currently installing
 
 example
 -------
-config.vm.provision "shell", path: "config/vagrant/run.sh"
+config.vm.provision "shell", path: "run.sh"
 
 
 Todo
