@@ -3,8 +3,6 @@
 # Source function library.
 . /etc/init.d/functions
 
-/vagrant/config/vagrant/installers/extraRepos.sh;
-
-
+/vagrant/installers/extraRepos.sh;
 
 setenforce 0 > /dev/null
